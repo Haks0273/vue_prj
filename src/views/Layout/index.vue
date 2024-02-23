@@ -18,6 +18,7 @@
   <LayoutNav />
   <LayoutHeader />
   <LayoutHeaderFixed />
+  <!-- <RouterView :key = "$route.fullPath"/> -->
   <RouterView />
   <LayoutFooter />
 </template>
