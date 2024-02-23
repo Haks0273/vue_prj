@@ -1,8 +1,8 @@
 <script setup>
   
-  import { useCategroyStore } from '@/stores/categroy'; 
+  import { useCategoryStore } from '@/stores/category'; 
 
-  const categroyStore = useCategroyStore();
+  const categoryStore = useCategoryStore();
  
 </script>
 
@@ -13,8 +13,8 @@
         <RouterLink to="/">小兔鲜</RouterLink>
       </h1>
       <ul class="app-header-nav">
-        <li class="home" v-for="item in categroyStore.categroyList" :key="item.id">
-          <RouterLink to="/">{{ item.name }}</RouterLink>
+        <li class="home" v-for="item in categoryStore.categoryList" :key="item.id">
+          <RouterLink active-class="active" :to="{ path: `/category/${item.id}` }">{{ item.name }}</RouterLink>
         </li>
       </ul>
       <div class="search">

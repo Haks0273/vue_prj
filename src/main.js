@@ -7,6 +7,7 @@ import App from './App.vue'
 import router from './router'
 import '@/styles/common.scss'
 
+import { lazyPlugin } from './directives/lazyLoad'
 
 
 const app = createApp(App)
@@ -16,3 +17,4 @@ app.use(router)
 
 app.mount('#app')
 
+app.use(lazyPlugin)

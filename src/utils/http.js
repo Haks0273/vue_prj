@@ -1,7 +1,7 @@
 import axios from "axios";
 
 // 创建一个axios实例
-const httpIntance = axios.create({
+const httpInstance = axios.create({
     // 设置请求的baseURL
     baseURL: "http://pcapi-xiaotuxian-front-devtest.itheima.net",
     // 设置请求的headers
@@ -13,7 +13,7 @@ const httpIntance = axios.create({
 });
 
 // 配置请求拦截器
-httpIntance.interceptors.request.use(
+httpInstance.interceptors.request.use(
     config => {
         return config;
     },
@@ -23,7 +23,7 @@ httpIntance.interceptors.request.use(
 );
 
 // 配置响应拦截器
-httpIntance.interceptors.response.use(
+httpInstance.interceptors.response.use(
     response => {
         return response.data;
     },
@@ -31,4 +31,4 @@ httpIntance.interceptors.response.use(
         return Promise.reject(error);
     }
 );
-export default httpIntance;
+export default httpInstance;

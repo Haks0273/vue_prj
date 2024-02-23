@@ -5,10 +5,10 @@
   import LayoutHeader from '@/views/Layout/components/LayoutHeader.vue'
   import LayoutHeaderFixed from '@/views/Layout/components/LayoutHeaderFixed.vue';
 
-  import { useCategroyStore } from '@/stores/categroy';  
+  import { useCategoryStore } from '@/stores/category';  
   import { onMounted } from 'vue';
 
-  const categroyStore = useCategroyStore();
+  const categroyStore = useCategoryStore();
   onMounted(() => {
     categroyStore.getCategory();
   })
