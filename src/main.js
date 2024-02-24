@@ -8,6 +8,8 @@ import router from './router'
 import '@/styles/common.scss'
 
 import { lazyPlugin } from './directives/lazyLoad'
+import { componentPlugin } from '@/components'
+
 
 
 const app = createApp(App)
@@ -18,3 +20,4 @@ app.use(router)
 app.mount('#app')
 
 app.use(lazyPlugin)
+app.use(componentPlugin)
