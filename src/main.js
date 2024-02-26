@@ -9,15 +9,18 @@ import '@/styles/common.scss'
 
 import { lazyPlugin } from './directives/lazyLoad'
 import { componentPlugin } from '@/components'
+import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
 
 
 
 const app = createApp(App)
+const pinia = createPinia()
 
-app.use(createPinia())
+pinia.use(piniaPluginPersistedstate)
+
+app.use(pinia)
 app.use(router)
-
-app.mount('#app')
-
 app.use(lazyPlugin)
 app.use(componentPlugin)
+
+app.mount('#app')
